@@ -32547,13 +32547,19 @@ class AddPost extends _react.Component {
       placeholder: "Name",
       value: Name,
       onChange: this.onChange
-    })), _react.default.createElement("fieldset", null, _react.default.createElement("input", {
+    })), _react.default.createElement("fieldset", null, _react.default.createElement("textarea", {
       type: "text",
       name: "Message",
       placeholder: "Write a new Post...",
+      style: {
+        width: '600px',
+        height: '150px'
+      },
       value: Message,
-      onChange: this.onChange
-    })), _react.default.createElement("fieldset", null, _react.default.createElement("input", {
+      onChange: this.onChange,
+      rows: "4",
+      cols: "50"
+    }, ' ')), _react.default.createElement("fieldset", null, _react.default.createElement("input", {
       type: "submit",
       value: "Submit",
       className: "btn"
@@ -32656,7 +32662,11 @@ class PostItem extends _react.Component {
       return null;
     }
 
-    return _react.default.createElement("div", null, _react.default.createElement("b", null, " "), _react.default.createElement("div", {
+    return _react.default.createElement("div", {
+      style: {
+        border: '2px solid black'
+      }
+    }, _react.default.createElement("b", null, " "), _react.default.createElement("div", {
       style: this.getStyle()
     }, _react.default.createElement("p", {
       style: {

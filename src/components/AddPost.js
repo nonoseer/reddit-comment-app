@@ -48,13 +48,18 @@ export class AddPost extends Component {
             />
           </fieldset>
           <fieldset>
-            <input
+            <textarea
               type="text"
               name="Message"
               placeholder="Write a new Post..."
+              style={{ width: '600px', height: '150px' }}
               value={Message}
               onChange={this.onChange}
-            />
+              rows="4"
+              cols="50"
+            >
+              {' '}
+            </textarea>
           </fieldset>
           <fieldset>
             <input type="submit" value="Submit" className="btn" />

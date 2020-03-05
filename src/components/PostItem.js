@@ -33,7 +33,7 @@ export class PostItem extends Component {
     }
 
     return (
-      <div>
+      <div style={{ border: '2px solid black' }}>
         <b> </b>
         <div style={this.getStyle()}>
           <p style={{ color: 'blue' }}>
