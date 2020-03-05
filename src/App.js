@@ -5,50 +5,7 @@ import Post from './components/Post'
 import AddPost from './components/AddPost'
 
 const App = () => {
-  const initState = [
-    {
-      id: uuid.v1(),
-      name: 'Hu',
-      body: 'Hellow',
-      score: 0,
-      index: [0],
-      replies: [
-        {
-          id: uuid.v1(),
-          name: 'Jay',
-          body: 'Meow',
-          score: 0,
-          index: [0, 0],
-          replies: []
-        },
-        {
-          id: uuid.v1(),
-          name: 'Jayden',
-          body: 'Woof',
-          score: 0,
-          index: [0, 1],
-          replies: []
-        }
-      ]
-    },
-    {
-      id: uuid.v1(),
-      name: 'Wen',
-      body: 'AWWW',
-      score: 0,
-      index: [1],
-      replies: [
-        {
-          id: uuid.v1(),
-          name: 'Sam',
-          body: 'Kas',
-          score: 0,
-          index: [1, 0],
-          replies: []
-        }
-      ]
-    }
-  ]
+  const initState = []
 
   const [state, setstate] = useState(initState)
 

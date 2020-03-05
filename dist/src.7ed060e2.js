@@ -32751,42 +32751,7 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 const App = () => {
-  const initState = [{
-    id: uuid.v1(),
-    name: 'Hu',
-    body: 'Hellow',
-    score: 0,
-    index: [0],
-    replies: [{
-      id: uuid.v1(),
-      name: 'Jay',
-      body: 'Meow',
-      score: 0,
-      index: [0, 0],
-      replies: []
-    }, {
-      id: uuid.v1(),
-      name: 'Jayden',
-      body: 'Woof',
-      score: 0,
-      index: [0, 1],
-      replies: []
-    }]
-  }, {
-    id: uuid.v1(),
-    name: 'Wen',
-    body: 'AWWW',
-    score: 0,
-    index: [1],
-    replies: [{
-      id: uuid.v1(),
-      name: 'Sam',
-      body: 'Kas',
-      score: 0,
-      index: [1, 0],
-      replies: []
-    }]
-  }];
+  const initState = [];
   const [state, setstate] = (0, _react.useState)(initState);
 
   const changeScore = (ind, adjustment) => {
